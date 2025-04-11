@@ -1,0 +1,476 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* navbar css */
+
+.navbar-section{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+}
+.btn-nav {
+    border: 2px solid #47B2E4;
+    color: white;
+    border-radius: 50px;
+    padding: 6px 24px;
+    margin-left: 20px;
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: #fff;
+    font-weight: 900;
+}
+.nav-link {
+    color: #fff;
+}
+.nav-link:focus, .nav-link:hover {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: underline;
+}
+/* hero css */
+
+.hero-section {
+    background-color: #37517E;
+    position: relative;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-content h1 {
+    font-size: 52px;
+    color: #fff;
+}
+.hero-content p {
+    font-size: 24px;
+    color: #fff;
+}
+.btn-hero {
+    background-color: #47B2E4;
+    border-radius: 50px;
+    padding: 6px 24px;
+    color: #fff;
+    font-weight: 600;
+}
+.btn-hero:hover {
+    background-color: #fff;
+    color: #47B2E4;
+}
+.btn-play{
+    background-color: none;
+    color: #fff;
+    font-weight: 600;
+}
+.btn-play:hover{
+    background-color: #47B2E4;
+    color: #fff;
+    border-radius: 50px;
+    padding: 6px 24px;
+}
+
+/* logo slider css */
+
+
+.logo-section {
+    background-color: #F3F5FA;
+}
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 7));
+    }
+  }
+  .slider {
+    height: 75px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+  }
+  .slider .slide-track {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+  }
+  .slider .slide {
+    height: 100px;
+    width: 250px;
+  }
+
+  /* abot css */
+
+  .about-section {
+    padding: 60px;
+  }
+  .underline1{
+    width: 4%;
+    background-color: #47B2E4;
+    height: 4px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .underline1::after {
+    content: ' ';
+    position: absolute;
+    background-color: #868484;
+    width: 100%;
+    height: 4px;
+    left: 100%;
+  }
+  .underline1::before {
+    content: ' ';
+    position: absolute;
+    background-color: #868484;
+    width: 100%;
+    height: 4px;
+    right: 100%;
+  }
+  .about-points .fa-check-double {
+    color: #47B2E4;
+  }
+  .btn-about {
+    border: 2px solid #47B2E4;
+    background: transparent;
+    color: #47B2E4;
+    padding: 8px 14px;
+  }
+  .btn-about:hover {
+    background: #47B2E4;;
+    color: #fff;
+    padding: 8px 14px;
+  }
+
+
+  /* accordian css */
+
+  .accordian-section {
+    padding: 60px;
+  }
+  .acc-content h2{
+    color: #37517E;
+  }
+/* Graph section */
+.graph-image img {
+  width: 500px;
+}
+
+/* Bar Graph Horizontal  css by code pen link https://codepen.io/anythinggraphic/pen/LYPeaQV*/
+.bar-graph .year {
+  -webkit-animation: fade-in-text 2.2s 0.1s forwards;
+  animation: fade-in-text 2.2s 0.1s forwards;
+  opacity: 0;
+}
+
+.bar-graph-horizontal {
+  max-width: 100%;
+}
+
+.bar-graph-horizontal > div {
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.bar-graph-horizontal .year {
+  width: 50px;
+  display: inline-block;
+}
+
+.bar-graph-horizontal .bar {
+  border-radius: 7px;
+  height: 12px;
+  overflow: hidden;
+  position: relative;
+  width: 0;
+  background-color: #ddd; /* Optional background for unfilled bar */
+}
+
+.bar-graph-one .bar::after {
+  -webkit-animation: fade-in-text 2.2s 0.1s forwards;
+  animation: fade-in-text 2.2s 0.1s forwards;
+  color: #fff;
+  content: attr(data-percentage);
+  font-weight: 700;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Bar Colors and Animations */
+.bar-graph-one .bar-one .bar {
+  background-color: #64b2d1;
+  -webkit-animation: show-bar-one 1.2s 0.1s forwards;
+  animation: show-bar-one 1.2s 0.1s forwards;
+}
+
+.bar-graph-one .bar-two .bar {
+  background-color: #64b2d1;
+  -webkit-animation: show-bar-two 1.2s 0.2s forwards;
+  animation: show-bar-two 1.2s 0.2s forwards;
+}
+
+.bar-graph-one .bar-three .bar {
+  background-color: #64b2d1;
+  -webkit-animation: show-bar-three 1.2s 0.3s forwards;
+  animation: show-bar-three 1.2s 0.3s forwards;
+}
+
+.bar-graph-one .bar-four .bar {
+  background-color: #64b2d1;
+  -webkit-animation: show-bar-four 1.2s 0.4s forwards;
+  animation: show-bar-four 1.2s 0.4s forwards;
+}
+
+/* Bar Graph Horizontal Animations */
+@-webkit-keyframes show-bar-one {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes show-bar-one {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes show-bar-two {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes show-bar-two {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@-webkit-keyframes show-bar-three {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 75%;
+  }
+}
+
+@keyframes show-bar-three {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@-webkit-keyframes show-bar-four {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 55%;
+  }
+}
+
+@keyframes show-bar-four {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 55%;
+  }
+}
+
+@-webkit-keyframes fade-in-text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .graph-content {
+    text-align: center;
+  }
+
+  .graph-div {
+    text-align: center;
+  }
+
+  .bar-graph .bar {
+    margin: 10px auto;
+  }
+}
+/* services */
+.card {
+  gap: 5px;
+  width: fit-content;
+  padding-left: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  background-color: #fff;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon {
+  padding-left: 20px;
+  padding-top: 20px;
+  width: 40px;
+  height: 40px;
+  color: #4075c0; /* White icon */
+ 
+}
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #666;
+}
+
+@media (max-width: 767px) {
+  .card {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .card-icon {
+      margin-bottom: 10px;
+  }
+}
+/* call to action section */
+.call-to-action {
+  background-image: url('/assets/images/CALL-ACTION.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 60px 0;
+  position: relative; /* For potential positioning of elements */
+}
+
+.call-content {
+  margin-bottom: 20px;
+}
+
+.call-content h2 {
+  font-size: 2.0rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.call-button {
+  margin-top: 20px;
+}
+.btn-call {
+  background-color: #007bff; /* Blue background for button */
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-call:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+@media (max-width: 767px) {
+  .call-content h2 {
+      font-size: 2rem;
+  }
+
+  .call-content p {
+      font-size: 1rem;
+  }
+
+  .call-button {
+      margin-top: 30px;
+  }
+}
+/* gallery css */
+/* gallery nav */
+/* Gallery Nav */
+.navtabs {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.navtab {
+  margin: 0 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.navtab:hover {
+  color: #007BFF;
+}
+
+.navtab.active {
+  color: #007BFF;
+  font-weight: 600;
+}
+
+.navtabs .underline {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background: #007BFF;
+  transition: left 0.3s ease, width 0.3s ease;
+  margin-bottom: 7px;
+}
+
+/* Positioning and width adjustments for the underline */
+.underline-active {
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #007BFF;
+  transition: left 0.3s ease, width 0.3s ease;
+}
